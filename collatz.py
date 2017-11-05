@@ -69,6 +69,14 @@ if __name__ == "__main__":
     plt.xlabel('Starting Value')
     plt.title("Starting Value vs. # of calculations")
     
+    '''
+    note to self:
+        We notice that for a large range (0-1000 or more) we see an interesting design 
+        that implies there is some pattern to the conditional calculation process. 
+        We cannot prove the conjecture with a program because we can't check infinity
+        numbers, so a mathematician will have to come up with a traditional proof.
+    '''
+    
     
   
     
