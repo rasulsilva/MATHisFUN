@@ -1,4 +1,6 @@
 # MATHisFUN
+Rasul Silva (:
+
 validate, visualize and explore mathematical concepts, proofs, and conjectures!
 
 Here is a list of the projects contained in this repository with brief descriptions:
