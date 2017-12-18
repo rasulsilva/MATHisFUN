@@ -1,5 +1,17 @@
+'''
+Rasul Silva
+10/17/17
+category: MATH FUN
+Goldbach conjecture visualization
 
-##goldbach
+
+Description: The Goldbach conjecture states that any even number
+greater than 2 is the sum of 2 primes. For every even integer,
+this program calculates the pairs of primes that sum to the even 
+target. I wrote this program to see if there was any recognizable 
+pattern that could be useful. The produced graph displays the even
+target on the x axis and the addend values on the y axis.
+'''
 
 import matplotlib.pyplot as plt
 import math
