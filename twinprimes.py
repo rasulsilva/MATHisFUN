@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 
 '''
 Rasul Silva
@@ -16,19 +15,22 @@ twin primes on a plot. What follows is just that! (:
 import matplotlib.pyplot as plt
 import math
 
-#returns set of primes that exist from 0 to input(rangetop)
-def findprimes (rangetop):
-    primes = []
-    for x in range(0,rangetop+1):
-        divisorexists = 0
-        #note: evens can also be skipped
-        for w in range(2,int(math.ceil(x**.5))):#check all the way up to square root
-            if x%w == 0: 
-                divisorexists = 1 #divisor does exist, set boolean to 1 and break out       
-                break
-        if not divisorexists: #if divisor does not exist then the number is prime
-            primes.append(x)
-    return primes#all prime numbers in the range given
+#check if num is prime: return True or False
+def is_prime(num):
+    if num == 0 or num == 1: return False
+    if num % 2 == 0: return False
+    for value in range(2,int(num**.5) + 1):
+        if num % value == 0:
+            return False
+    return True
+
+#generate list of prime numbers up to range_top
+def generate_prime_list(range_top):
+    primes = [2]
+    for i in range(2,range_top+1):
+        if (is_prime(i)):
+            primes.append(i)
+    return primes 
 
 #find twin primes from a list of primes
 def findtwins (primelist):
@@ -61,11 +63,12 @@ def genplotlists(twins, rangetop):
     
 if __name__ == "__main__":
     
-    rangetop = 1000
-    primes = findprimes(rangetop) 
+    rangetop = 6000
+    primes = generate_prime_list(rangetop) 
     twins = findtwins(primes)
+    print(primes)
     print("twin primes: ")
-    print(twins)
+    #print(twins)
     rangelist, score = genplotlists(twins, rangetop)
     
     plt.plot(rangelist, score)
