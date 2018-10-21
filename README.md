@@ -19,5 +19,14 @@ Here is a list of the projects contained in this repository with brief descripti
                    
 3. goldbach.py - Goldbach's conjecture states that any even integer above two is the sum of two primes. The output plot of the program displays ALL prime pairs that sum to any even target. For example, if our even target was 12, the 2 addends plotted would be 5 and 7. Unfortunately, the output does not seem to be particularly useful.    
                  
-                   
+4. gilbreath.py - Gilbreath's conjecture states that if you take an ordered list of prime numbers and apply the forward difference operator to it (create a new list containing all the absolute differences between items in the original list) every generated list will start with a 1. Let's see an example to clarify!
+
+                                       FDO             FDO            FDO          FDO        FDO
+       prime_list = [2,3,5,7,11,13,...]->[1,2,2,4,2,...]->[1,0,2,2,...]->[1,2,0,...]->[1,2,...]->[1,...]
+                                          ^                ^              ^            ^          ^
+                               The first item in every generated list is 1
+       This program will generate all Gilbreath lists for a prime list of all numbers up to the input value "prime_number_rangetop"
+       and it will verify that they all start with a 1 (:
+                
+ 
                    
